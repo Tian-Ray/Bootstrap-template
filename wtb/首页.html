@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<title>Home</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<!-- VENDOR CSS -->
+	<link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/vendor/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="assets/vendor/linearicons/style.css">
+	<link rel="stylesheet" href="assets/vendor/chartist/css/chartist-custom.css">
+	<!-- MAIN CSS -->
+	<link rel="stylesheet" href="assets/css/main.css">
+	<!-- FOR DEMO PURPOSES ONLY. You should remove this in your project -->
+	<link rel="stylesheet" href="assets/css/demo.css">
+	<!-- GOOGLE FONTS -->
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
+	<!-- ICONS -->
+	<link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon.png">
+</head>
+
+<body>
+	<!-- 主盒子 -->
+	<div id="wrapper">
+		
+		<!-- 上方导航栏 -->
+		<nav class="navbar navbar-default navbar-fixed-top">
+			
+			<div class="brand">
+				<!-- logo图片 -->
+				<a href="#"><img src="assets/img/logo-dark.png" alt="Klorofil Logo" class="img-responsive logo"></a>
+			</div>
+			
+			<!-- 左侧栏伸缩按钮 -->
+			<div class="navbar-btn">
+				<button type="button" class="btn-toggle-fullwidth"><i class="lnr lnr-arrow-left-circle"></i></button>
+			</div>
+			
+			<!-- 标题 -->
+			<div class="navbar-header" style="margin-left: 27%;">
+				<h1>乌托邦别墅预定管理平台</h1>
+		    </div>
+			
+			<!-- 右上方欢迎信息 -->
+			<div id="navbar-menu">
+				<ul class="nav navbar-nav navbar-right">
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle icon-menu" data-toggle="dropdown">
+							<i class="lnr lnr-alarm"></i>
+							<span class="badge bg-danger">3</span>
+						</a>
+						<ul class="dropdown-menu notifications">
+							<li><a href="#" class="notification-item"><span class="dot bg-warning"></span>待办事情1</a></li>
+							<li><a href="#" class="notification-item"><span class="dot bg-danger"></span>待办事情2</a></li>
+							<li><a href="#" class="notification-item"><span class="dot bg-success"></span>待办事情3</a></li>
+						</ul>
+					</li>
+					
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span>欢迎登陆</span> <i class="icon-submenu lnr lnr-chevron-down"></i></a>
+						<ul class="dropdown-menu">
+							<li><a href="#"><i class="lnr lnr-user"></i> <span>个人中心</span></a></li>
+							<li><a href="#"><i class="lnr lnr-envelope"></i> <span>信息展示</span></a></li>
+							<li><a href="#"><i class="lnr lnr-cog"></i> <span>设置密码</span></a></li>
+							<li><a href="#"><i class="lnr lnr-exit"></i> <span>登出</span></a></li>
+						</ul>
+					</li>
+					
+					<!-- 显示时间 -->
+					<div class="navbar-btn navbar-btn-right">
+						<a class="btn btn-success" href="#"><i class="glyphicon glyphicon-time"></i><span id="time"></span></a>
+					</div>
+				</ul>
+			</div>
+		</nav>
+		<!-- 上方导航栏结束 -->
+		
+		
+		<!-- 左侧栏 -->
+		<div id="sidebar-nav" class="sidebar">
+			<div class="sidebar-scroll" style="margin-top: 10%;">
+				<nav>
+					<ul class="nav">
+						<li><a href="#"><i class="lnr lnr-home"></i> <span>后台管理</span></a></li>
+						<!-- 第一个主权限 -->
+						<!--
+							href="#subPages"和id="subPages"绑定
+							此处#subPages的值可以是任意数据，但是必须和id一致
+							不同li节点的值不能是一样的
+						-->
+						<li>
+							<a href="#subPages" data-toggle="collapse" class="collapsed"><i class="lnr lnr-cog"></i> <span>系统设置</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
+							<div id="subPages" class="collapse ">
+								<ul class="nav">
+									<li><a href="#" class="">用户管理</a></li>
+									<li><a href="#" class="">角色管理</a></li>
+									<li><a href="#" class="">权限管理</a></li>
+									<li><a href="#" class="">日志管理</a></li>
+								</ul>
+							</div>
+						</li>
+						
+						<!-- 第二个主权限 -->
+						<li>
+							<a href="#subPages1" data-toggle="collapse" class="collapsed"><i class="lnr lnr-cog"></i> <span>内容管理</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
+							<div id="subPages1" class="collapse ">
+								<ul class="nav">
+									<li><a href="#" class="">城市管理</a></li>
+									<li><a href="#" class="">店面管理</a></li>
+									<li><a href="#" class="">时段管理</a></li>
+									<li><a href="#" class="">别墅管理</a></li>
+								</ul>
+							</div>
+						</li>
+						
+						<!-- 第三个主权限 -->
+						<li>
+							<a href="#subPages2" data-toggle="collapse" class="collapsed"><i class="lnr lnr-cog"></i> <span>预定管理</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
+							<div id="subPages2" class="collapse ">
+								<ul class="nav">
+									<li><a href="#" class="">订单管理</a></li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		<!-- 左侧栏结束 -->
+		
+		
+		<!-- 主页面盒子 -->
+		<div class="main">
+			<!-- 内容区盒子 -->
+			<div class="main-content">
+				<!-- 表格区盒子 -->
+				<div class="panel">
+					<!-- 表格头部 -->
+					<div class="panel-heading">
+						<!-- 表格标题 -->
+						<h3 class="panel-title">用户数据展示</h3>
+						<div class="right">
+							<button type="button" class="btn-toggle-collapse"><i class="lnr lnr-chevron-up"></i></button>
+							<button type="button" class="btn-remove"><i class="lnr lnr-cross"></i></button>
+						</div>
+					</div>
+					
+					<!-- 表格主体 -->
+					<div class="panel-body no-padding">
+						
+						<!-- 搜索控件 -->
+						<form class="navbar-form navbar-left" action="#">
+							<!-- 搜索框 -->
+							<div class="input-group">
+								<input type="text" class="form-control" placeholder="请输入搜索数据...">
+							</div>
+							
+							<!-- 起始时间 -->
+							<div class="input-group">
+								<input type="date" class="form-control">
+							</div>
+							<!-- 终止时间 -->
+							<div class="input-group">
+								<input type="date" class="form-control">
+							</div>
+							
+							<!-- 下拉列表 -->
+							<div class="input-group">
+								<select class="form-control">
+									<option>==父级权限==</option>
+									<option>系统管理</option>
+									<option>内容管理</option>
+									<option>预定管理</option>
+								</select>
+							</div>
+							
+							<!-- 按钮和超链接 -->
+							<div class="input-group">
+								<span class="input-group-btn"><button type="submit" class="btn btn-success">查询</button></span>
+								<span class="input-group-btn"><a href="添加修改页面.html" class="btn btn-primary" style="margin-left: 5px;">添加</a></span>
+								<span class="input-group-btn"><a href="#" class="btn btn-danger" style="margin-left: 5px;">批量删除</a></span>
+							</div>
+						</form>
+						
+						<table class="table table-striped" style="font-size: 20px;">
+							<!-- 表头 -->
+							<thead>
+								<tr>
+									<th>
+										<input type="checkbox" />
+										ID
+									</th>
+									<th>用户姓名</th>
+									<th>账户</th>
+									<th>注册时间</th>
+									<th>操作</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										<input type="checkbox" />
+										1001
+									</td>
+									<td>Steve</td>
+									<td>aa123</td>
+									<td>2018-09-09 14:23:34</td>
+									<td>
+										<a href="#" class="label label-primary">编辑</a>
+										<a href="#" class="label label-danger">删除</a>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<input type="checkbox" />
+										1002
+									</td>
+									<td>Amber</td>
+									<td>bb123</td>
+									<td>2018-09-09 14:23:34</td>
+									<td>
+										<a href="#" class="label label-primary">编辑</a>
+										<a href="#" class="label label-danger">删除</a>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<input type="checkbox" />
+										1003
+									</td>
+									<td>Michael</td>
+									<td>cc123</td>
+									<td>2018-09-09 14:23:34</td>
+									<td>
+										<a href="#" class="label label-primary">编辑</a>
+										<a href="#" class="label label-danger">删除</a>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<input type="checkbox" />
+										1004
+									</td>
+									<td>Roger</td>
+									<td>dd123</td>
+									<td>2018-09-09 14:23:34</td>
+									<td>
+										<a href="#" class="label label-primary">编辑</a>
+										<a href="#" class="label label-danger">删除</a>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<input type="checkbox" />
+										1005
+									</td>
+									<td>Smith</td>
+									<td>ee123</td>
+									<td>2018-09-09 14:23:34</td>
+									<td>
+										<a href="#" class="label label-primary">编辑</a>
+										<a href="#" class="label label-danger">删除</a>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						
+						<!-- 分页控件 -->
+						<ul class="pagination" style="float: right;margin-right: 1%;margin-top: 0%;">
+						    <li><a href="#">&laquo;</a></li>
+						    <!-- 声明class为active表示当前超链接被选中，用于表示当前页 -->
+						    <li class="active"><a href="#">1</a></li>
+						    <li><a href="#">2</a></li>
+						    <li><a href="#">3</a></li>
+						    <li><a href="#">4</a></li>
+						    <li><a href="#">5</a></li>
+						    <li><a href="#">&raquo;</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- 内容区盒子结束 -->
+		</div>
+		<!-- 主页面盒子结束 -->
+		
+	</div>
+	<!-- 主盒子结束 -->
+	
+	<!-- Javascript -->
+	<script src="assets/vendor/jquery/jquery.min.js"></script>
+	<script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script src="assets/vendor/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+	<script src="assets/vendor/jquery.easy-pie-chart/jquery.easypiechart.min.js"></script>
+	<script src="assets/vendor/chartist/js/chartist.min.js"></script>
+	<script src="assets/scripts/klorofil-common.js"></script>
+	
+	<script type="text/javascript">
+		//JQ代码请在此处编写...
+		//显示当前时间
+		clock();
+		var attime;
+		function clock(){
+			var time=new Date();          
+			attime= time.toLocaleTimeString() ;
+			$("#time").text(attime);
+		}
+		setInterval(clock,1000);
+	</script>
+</body>
+</html>

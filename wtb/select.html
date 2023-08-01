@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" href="assets/css/bootstrap-select.min.css"/>
+		<link rel="stylesheet" href="assets/css/bootstrap.css"/>
+	</head>
+	<body>
+		
+		<div class="col-md-4" style="padding:0;">
+		    <select id="selectSf" class="selectpicker" multiple data-hide-disabled="true" data-size="5" data-live-search="true" title="Please">
+		       <option value="00000000">alphabet</option>
+		       <option value="10000000">aa</option>
+		       <option value="20000000">bbb</option>
+		       <option value="20000000">cccc</option>
+		       <option value="30000000">ddddd</option>
+		       <option value="40000000">eeeeee</option>
+		    </select>
+		</div>
+		
+	</body>
+	<script type="text/javascript" src="./assets/vendor/jquery/jquery.js"></script>
+	<script type="text/javascript" src="assets/vendor/bootstrap/js/bootstrap-select.min.js"></script>
+	<script type="text/javascript" src="assets/vendor/bootstrap/js/bootstrap.js"></script>
+
+<script type="text/javascript">
+	
+	/*
+	1. class = "selectpicker" ； 普通下拉框
+	
+	2. tittle = "请选择数据项" ；作用与placeholder相同
+	
+	3. class = "selectpicker" multiple； 搭配使用，可以实现多选
+	
+	4. data-live-search = "true"； 打开模糊查询，默认值是false，需手动设置打开
+	
+	5. data-max-options = "2"； 设置多选个数，此时至多可选2个选项
+	
+	6.data-style = "btn-primary"；默认选中样式，bootstrap的按钮样式
+	
+	7. data-size = "10"；设置下拉框显示的option个数
+	
+	8. data-dropup-auto="false"， 表示下拉框默认向下展开
+	
+	9.  $('.selectpicker').selectpicker('selectAll'); 全选：
+	    $('.selectpicker').selectpicker('deselectAll'); 反选：
+	    $('.selectpicker').selectpicker('mobile'); 适应手机模式：
+	
+	问题：动态添加数据之后，下拉框并没有渲染，没有报错，浏览器查看源码时又存在这些选项值。或者，编译完成后第一次进入页面生效，刷新或切换到其他界面之后就失效。
+	
+	处理：
+	
+	$(function () {
+	    $('.selectpicker').selectpicker('refresh');
+	    $('.selectpicker').selectpicker('render');
+	})
+	取值：
+	
+	选中的值可以通过jquery获取：let source = $("#select").val().join();
+	
+	由于选中结果是个array，使用时记得转换成string再做操作。
+	
+	动态赋值：
+	
+	$("#select").append("<option value='1111'>text</option>");
+	*/
+	
+</script>
+
+
+
+</html>
